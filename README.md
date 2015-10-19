@@ -9,6 +9,7 @@ Personal project to learn a little NodeJS and Angular
 
 #Getting started
 * Start Mongo ( ie, "sudo mongod" if on osx )
+* cd to Sever and run "npm install" after that goto cd public and run "bower install"
 * Start the app, "cd Server" then run " node server.js"
 * Open Browser and point to "http://localhost:3000"
 
