@@ -1,0 +1,23 @@
+
+<div ng-controller="LoggerViewerController">
+
+    <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp" style="text-align:center; margin-left: auto; margin-right: auto;">
+        <thead>
+        <tr>
+            <h4>Search Term</h4>
+            <h4><div ng-show="loading"> Loading Contents </div> </h4>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="search in searchData.slice().reverse()">
+            <td class="mdl-data-table__cell--non-numeric">
+
+                <h3>
+                    <input class="mdl-checkbox__input" type="checkbox" ng-click="deleteSearchTerm(search._id)">  {{$index + 1}} {{ search.text }}
+                </h3>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
