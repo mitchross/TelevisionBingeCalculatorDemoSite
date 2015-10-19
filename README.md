@@ -1,6 +1,9 @@
 # TelevisionBingeCalculatorDemoSite
 Personal project to learn a little NodeJS and Angular
 
+#Fun CSS stuff
+* Google Material CSS ->http://www.getmdl.io/index.html
+
 #Requirements
 * Mongodb
 * NodeJS
