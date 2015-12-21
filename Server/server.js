@@ -7,7 +7,8 @@ var bodyParser = require('body-parser'); // pull information from HTML POST (exp
 var methodOverride = require('method-override');
 
 //Could use mongolab endpoint, demo is limited to local host
-mongoose.connect('mongodb://localhost/searchesTest');
+//mongoose.connect('mongodb://localhost/searchesTest');
+mongoose.connect('mongodb://vanillax:temp15@ds037262.mongolab.com:37262/tvbc_logger/Searches');
 
 app.use( cors() );
 
