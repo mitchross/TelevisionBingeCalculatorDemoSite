@@ -1,0 +1,25 @@
+{
+  "name": "public",
+  "authors": [
+    "mitchross <mitchross09@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "/javascripts/bower_componets",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "angular-route": "~1.4.7",
+    "angular-xml2json": "~0.0.2"
+  }
+}

@@ -1,0 +1,32 @@
+<div ng-controller="AndroidReviewController">
+
+    <style>
+        .center {
+            margin: auto;
+            width: 60%;
+            padding: 10px;
+        }
+        .boarder {
+            border: 2px solid #78909C;
+            margin-bottom: 10px;
+        }
+        .time
+        {
+            font-size: small;
+        }
+    </style>
+
+    <div class="center"><h2>Android Reviews</h2></div>
+    <div class="center boarder" ng-repeat="review in reviewData">
+        <div>
+            <h4>{{review.score}} Star - <time class="time">{{review.date | amDateFormat: 'dddd, MMMM Do YYYY, h:mm a'}}</time> </h4>
+        </div>
+        <div class="media-body">
+            <h5 class="media-heading user_name">Reviewer: {{review.userName}}</h5>
+            {{review.text}}
+        </div>
+    </div>
+
+
+
+</div>

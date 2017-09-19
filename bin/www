@@ -4,7 +4,7 @@
  * Module dependencies.
  */
 
-var app = require('../Server/server.js');
+var app = require('../server.js');
 var debug = require('debug')('TVBC_SITE:server');
 var http = require('http');
 

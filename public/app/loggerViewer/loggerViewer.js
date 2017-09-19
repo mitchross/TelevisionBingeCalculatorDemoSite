@@ -2,7 +2,7 @@ angular.module('tvbcLogViewerApp.loggerViewer', [
     'ngRoute'
 ])
     //Was using heroku app endpoint, showing local host only
-    .constant("LOGGER_API_ROOT", "http://localhost:3000/api")
+    .constant("LOGGER_API_ROOT", "/api")
 
  .config(function ($routeProvider) {
         $routeProvider

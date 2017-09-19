@@ -1,0 +1,32 @@
+<div ng-controller="AppleReviewController">
+
+    <style>
+        .center {
+            margin: auto;
+            width: 60%;
+            padding: 10px;
+        }
+        .boarder {
+            border: 2px solid #78909C;
+            margin-bottom: 10px;
+        }
+        .time
+        {
+            font-size: small;
+        }
+        </style>
+
+    <div class="center"><h2>Apple Reviews</h2></div>
+    <div class="center boarder" ng-repeat="review in reviewData">
+        <div>
+            <h4>{{review['im:rating'][0]}} Star - <time class="time">{{review.updated[0] | amDateFormat: 'dddd, MMMM Do YYYY, h:mm a'}}</time> </h4>
+        </div>
+        <div class="media-body">
+            <h5 class="media-heading user_name">Reviewer: {{review.author[0].name[0]}}</h5>
+            {{review.content[0]._}}
+        </div>
+    </div>
+
+
+
+</div>

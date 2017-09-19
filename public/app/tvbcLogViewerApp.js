@@ -1,8 +1,15 @@
 angular.module('tvbcLogViewerApp', [
     'ngRoute',
+    'angularMoment',
     'tvbcLogViewerApp.loggerViewer',
-    'tvbcLogViewerApp.scratchPad'
-])
+    'tvbcLogViewerApp.androidreviews',
+    'tvbcLogViewerApp.iosreviews'
+
+
+
+     
+
+    ])
 .config(function($routeProvider){
 
         $routeProvider
