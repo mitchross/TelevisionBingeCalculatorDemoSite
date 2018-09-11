@@ -19,6 +19,7 @@
   ],
   "dependencies": {
     "bootstrap": "~3.3.5",
-    "angular-route": "~1.4.7"
+    "angular-route": "~1.4.7",
+    "angular-xml2json": "~0.0.2"
   }
 }

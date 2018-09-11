@@ -1,24 +1,25 @@
-angular.module('tvbcLogViewerApp.reviews', [
-        'ngRoute'
+angular.module('tvbcLogViewerApp.iosreviews', [
+        'ngRoute',
+        'angularMoment'
     ])
-    //Was using heroku app endpoint, showing local host only
-    .constant("APPLE_API", "https://itunes.apple.com/rss/customerreviews/id=583093664/json")
+
+    .constant("LOGGER_API_ROOT", "/api")
 
     .config(function ($routeProvider) {
         $routeProvider
-            .when('/reviews' , {
-                templateUrl: 'app/reviews/reviews.html'
+            .when('/iosreviews' , {
+                templateUrl: 'app/reviews/iosreviews.html'
             })
         ;
     })
 
-    .factory('appleReviews', function ($http, $log, APPLE_API) {
+    .factory('appleReviews', function ($http, $log, LOGGER_API_ROOT) {
 
         return {
             getReviews: function() {
                 console.log("We made it to factory");
 
-                return $http.get( APPLE_API);
+                return $http.get( LOGGER_API_ROOT + '/getiosreviews');
             }
 
         };
@@ -32,7 +33,8 @@ angular.module('tvbcLogViewerApp.reviews', [
         $scope,
         $http,
         LOGGER_API_ROOT,
-        appleReviews)
+        appleReviews
+        )
     {
 
         $scope.loading = true;
@@ -40,8 +42,8 @@ angular.module('tvbcLogViewerApp.reviews', [
         appleReviews.getReviews().then( function ( response )
         {
             console.log("We made it to getReviews() in controller");
-
-            $scope.reviewData = response.data.feed.entry;
+            var entries = response.data.feed.entry;
+            $scope.reviewData = entries.splice(1, entries.length);
             $scope.loading = false;
         });
     });
