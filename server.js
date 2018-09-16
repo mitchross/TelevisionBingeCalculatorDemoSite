@@ -72,6 +72,9 @@ app.get('/api/searchterms', function( req , res ){
 
         res.json(searchTerms);
     });
+
+
+
 });
 
 function parseXML( data , cb) {
