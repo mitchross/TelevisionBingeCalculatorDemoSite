@@ -96,7 +96,7 @@ app.get('/api/getiosreviews', function( req , res ){
 
     var reqOptions = {
         host : "itunes.apple.com",
-        path: "/rss/customerreviews/id=583093664/sortBy=mostRecent/json",
+        path: "/rss/customerreviews/id=583093664/sortBy=mostRecent/xml",
         method: 'GET',
         headers: {
             'Accept': 'Accept: text/plain, */*; q=0.01',
@@ -113,13 +113,13 @@ app.get('/api/getiosreviews', function( req , res ){
         });
         response.on('end', function() {
             console.log(completeResponse);
-            var data = JSON.parse(completeResponse)
-            res.send( data )
+            // var data = JSON.parse(completeResponse)
+            // res.send( data )
 
-            // data = parseXML( completeResponse , function ( parsed )
-            // {
-            //     res.send( parsed )
-            // });
+             data = parseXML( completeResponse , function ( parsed )
+            {
+                 res.send( parsed )
+             });
             
              
 
