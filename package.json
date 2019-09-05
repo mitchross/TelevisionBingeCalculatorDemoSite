@@ -7,7 +7,7 @@
   "author": "VanillaX",
   "dependencies": {
     "body-parser": "^1.18.3",
-    "bower": "^1.8.4",
+    "bower": "^1.8.8",
     "cors": "^2.7.2",
     "ejs": "^1.0.0",
     "elementtree": "0.1.6",
