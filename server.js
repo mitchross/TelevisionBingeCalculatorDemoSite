@@ -11,7 +11,7 @@ var request = require('request');
 var et = require("elementtree");
 var FeedParser = require('feedparser');
 var moment = require('moment');
-const gplay = require('./common/google-play-scraper/index');
+const gplay = require('google-play-scraper');
 const path = require('path');
 const qs = require('querystring');
 
@@ -191,7 +191,6 @@ function buildUrl (req, subpath) {
     return req.protocol + '://' + path.join(req.get('host'), req.baseUrl, subpath);
 }
 
-
 /* App reviews */
 app.get('/apps/:appId/reviews', function (req, res, next) {
     function paginate (apps) {
@@ -212,7 +211,7 @@ app.get('/apps/:appId/reviews', function (req, res, next) {
     }
     console.log("we made it in ");
 
-    const opts = Object.assign({appId: 'com.meijer.mobile.meijer'},  req.query);
+    const opts = Object.assign({appId: req.params.appId}, req.query);
     gplay.reviews(opts)
         .then(toList)
         .then(paginate)
