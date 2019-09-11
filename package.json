@@ -25,7 +25,6 @@
     "node": "4.8.4"
   },
   "scripts": {
-    "postinstall": "bower install",
-    "postinstall": "cd common/google-play-scraper && npm install" 
+    "postinstall": "bower install"
   }
 }
