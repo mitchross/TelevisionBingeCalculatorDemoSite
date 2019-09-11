@@ -11,7 +11,7 @@ var request = require('request');
 var et = require("elementtree");
 var FeedParser = require('feedparser');
 var moment = require('moment');
-const gplay = require('./common/google-play-scraper');
+const gplay = require("./libs/google-play-scraper");
 const path = require('path');
 const qs = require('querystring');
 
