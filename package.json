@@ -26,6 +26,6 @@
   },
   "scripts": {
     "postinstall": "bower install",
-    "postinstall": "cd common && npm install" 
+    "postinstall": "cd common/google-play-scraper && npm install" 
   }
 }
