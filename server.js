@@ -211,7 +211,7 @@ app.get('/apps/:appId/reviews', function (req, res, next) {
     }
     console.log("we made it in ");
 
-    const opts = Object.assign({appId: req.params.appId}, req.query);
+    const opts = Object.assign({appId: req.params.appId, sort: gplay.sort.NEWEST}, req.query);
     gplay.reviews(opts)
         .then(toList)
         .then(paginate)
