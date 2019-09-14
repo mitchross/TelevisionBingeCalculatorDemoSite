@@ -4,19 +4,19 @@ Personal project to learn a little NodeJS and Angular. I wanted to be able to tr
 #Fun CSS stuff
 * Google Material CSS ->http://www.getmdl.io/index.html
 
-#Requirements
+# Requirements
 * Mongodb
 * NodeJS
 * NPM
 * Bower
 
-#Getting started
+# Getting started
 * Start Mongo ( ie, "sudo mongod" if on osx )
 * cd to Sever and run "npm install" after that goto cd public and run "bower install"
 * Start the app, "cd Server" then run " node server.js"
 * Open Browser and point to "http://localhost:3000"
 
-#Adding data
+# Adding data
 * POST
 * curl -XPOST -H "Content-type: application/json" -d '{"text":"testing1"}' 'http://localhost:3000/api/searchterms'
 
