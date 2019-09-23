@@ -2,7 +2,6 @@
 const fetch = require("node-fetch");
 
 //can store anything here to export
-var stuff = {};
 
 
 //Request an external endpoint for data
@@ -35,19 +34,21 @@ async function sayJokeAsync()
 }
 
 
-//test not needed
-//reference model for resolving a promise using then
-function getJoke() {
+
+const joke = function getJoke() {
     //call back goes to ".then" for processing
   sayJokeAsync().then((joke) => {
     //testing that the function works
     console.log("say joke promise resolved:" + joke)
 
     //you can store stuff 
-    stuff.myJoke = joke;
+    return joke
   })
 }
 
+//Example; I want to have access to the joke here
+console.log(joke)
+//So that I may export it at the same time as the main event
 
 
 
