@@ -14,7 +14,7 @@ var moment = require('moment');
 const gplay = require('google-play-scraper');
 const path = require('path');
 const qs = require('querystring');
-
+var joke = require('./fetchjoke');
 
 
 
@@ -217,4 +217,30 @@ app.get('/apps/:appId/reviews', function (req, res, next) {
         .then(paginate)
         .then(res.json.bind(res))
         .catch(next);
+});
+
+//Test logic for async await
+app.get('/api/thumser', function (req, res) {
+
+    //validate I can get here
+    console.log("thumser");
+
+    //validate I can pass text from API to func
+    joke.hello2("from api")
+
+ 
+    //validate async call
+    joke.sayJokeAsync().then((joke) => {
+        //Use the returned value once it exists
+
+        //validate I have the data and its being logged from API
+        console.log("API: say joke promise resolved:" + joke)
+
+         //finish the response
+        res.json(joke);
+
+        
+    });
+
+   
 });

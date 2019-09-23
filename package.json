@@ -19,6 +19,7 @@
     "moment-timezone": "0.5.13",
     "mongoose": "4.13.17",
     "morgan": "^1.9.1",
+    "node-fetch": "^2.6.0",
     "request": "^2.88.0",
     "xml2js": "0.4.16"
   },
