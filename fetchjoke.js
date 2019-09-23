@@ -63,5 +63,5 @@ function hello2(s) {
 }
 
 //export functions
-module.exports = { hello2, getJoke, sayJokeAsync, methods };
+module.exports = { hello2, getJoke, sayJokeAsync, stuff };
 
