@@ -16,7 +16,7 @@
     "google-play-scraper": "^7.0.0",
     "method-override": "^2.3.10",
     "moment": "^2.22.2",
-    "moment-timezone": "0.5.13",
+    "moment-timezone": "0.5.35",
     "mongoose": "4.13.17",
     "morgan": "^1.9.1",
     "request": "^2.88.0",
