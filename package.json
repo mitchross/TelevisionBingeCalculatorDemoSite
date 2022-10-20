@@ -17,7 +17,7 @@
     "method-override": "^2.3.10",
     "moment": "^2.22.2",
     "moment-timezone": "0.5.13",
-    "mongoose": "4.13.17",
+    "mongoose": "4.13.21",
     "morgan": "^1.9.1",
     "request": "^2.88.0",
     "xml2js": "0.4.16"
